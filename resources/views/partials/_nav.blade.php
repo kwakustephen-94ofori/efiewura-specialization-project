@@ -55,21 +55,11 @@
                                 
                                 <div class="navbar-collapse collapse clearfix">
                                     <ul class="navigation clearfix">
-                                        <li class="current dropdown"><a href="#">Home</a>
-                                            <ul>
-                                                <li><a href="index.html">Homepage One</a></li>
-                                                <li><a href="index-2.html">Homepage Two</a></li>
-                                                <li><a href="index-3.html">Homepage Three</a></li>
-                                                <li class="dropdown"><a href="index-3.html">Header Styles</a>
-                                                	<ul>
-                                                    	<li><a href="index.html">Header Style One</a></li>
-                                                        <li><a href="index-2.html">Header Style Two</a></li>
-                                                        <li><a href="index-3.html">Header Style Three</a></li>
-                                                    </ul>
-                                                </li>
-                                            </ul>
+                                        <li class=""><a href=" {{route('home')}} ">Home</a>
                                         </li>
+
                                         <li><a href="/about-us">About Us</a></li>
+
                                         <li class="dropdown"><a href="#">Our Agents</a>
                                         	<ul>
                                                 <li><a href="agents.html">Our Agents</a></li>
@@ -78,11 +68,9 @@
                                         </li>
                                         <li class="dropdown"><a href="#">Properties</a>
                                         	<ul>
-                                                <li><a href="properties-grid.html">Properties Grid View</a></li>
-                                                <li><a href="properties-grid-sidebar.html">Properties Grid Sidebar</a></li>
-                                                <li><a href="properties-list.html">Properties List View</a></li>
-                                                <li><a href="properties-list-sidebar.html">Properties List Sidebar</a></li>
-                                                <li><a href="property-details.html">Property Details</a></li>
+                                                <li><a href="#">Houses</a></li>
+                                                <li><a href="#">Land</a></li>
+                                                <li><a href="#">Other</a></li>
                                             </ul>
                                         </li>
                                         <li><a href="gallery.html">Gallery</a> </li>
