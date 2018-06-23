@@ -69,7 +69,7 @@
                                                 </li>
                                             </ul>
                                         </li>
-                                        <li><a href="about-us.html">About Us</a></li>
+                                        <li><a href="/about-us">About Us</a></li>
                                         <li class="dropdown"><a href="#">Our Agents</a>
                                         	<ul>
                                                 <li><a href="agents.html">Our Agents</a></li>

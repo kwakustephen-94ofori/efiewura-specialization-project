@@ -16,3 +16,5 @@
 // });
 
 Route::get('/', 'HomeController@index')->name('home');
+
+Route::get('/about-us', 'AboutController@about')->name('aboutUs');
