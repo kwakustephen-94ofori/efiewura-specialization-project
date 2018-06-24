@@ -10,4 +10,12 @@ class AdminController extends Controller
     public function adminIndex(){
     	return view('admin.index');
     }
+
+
+    // function to view all posted properties
+    public function viewProperties(){
+        
+        return view('admin.properties');
+    }
+
 }
