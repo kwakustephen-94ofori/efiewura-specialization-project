@@ -161,6 +161,8 @@ Route::get('owner/gallary/lands', 'OwnerController@ownerGallaryLands')->name('ow
 // Admin index route
 Route::get('/admin/index', 'AdminController@adminIndex')->name('AdminIndex');
 
+// Route to view all properties by admin
+Route::get('/admin/properties', 'AdminController@viewProperties')->name('allProperties');
 
 
 
