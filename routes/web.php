@@ -29,7 +29,11 @@ Route::get('/about-us', 'AboutController@about')->name('aboutUs');
 
 
 //======================Ben's Routes=================================
+Route::get('owner/index', 'OwnerController@ownerIndex')->name('owner-index');
 
+Route::get('owner/gallary/houses', 'OwnerController@ownerGallaryHouses')->name('owner-houses');
+
+Route::get('owner/gallary/lands', 'OwnerController@ownerGallaryLands')->name('owner-lands');
 
 
 
