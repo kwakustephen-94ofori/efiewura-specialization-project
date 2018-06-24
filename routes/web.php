@@ -83,6 +83,9 @@ Route::get('owner/gallary/lands', 'OwnerController@ownerGallaryLands')->name('ow
 
 
 //==============================Derricks Route==============================
+Route::get('/login', 'LoginController@login')->name('login');
+Route::post('/login', 'LoginController@store');
+Route::get('/logout', 'LoginController@doLogout');
 
 
 

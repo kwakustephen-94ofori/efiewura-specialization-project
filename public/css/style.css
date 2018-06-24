@@ -119,6 +119,8 @@ p{
 	line-height:1.9em;	
 }
 
+
+
 .strike-through{
 	text-decoration:line-through;	
 }
@@ -180,6 +182,9 @@ ul,li{
 	background:#01aeef;
 	border-color:#01aeef;
 }
+
+
+
 
 .btn-style-two{
 	position:relative;
