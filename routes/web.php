@@ -232,6 +232,7 @@ Route::get('/admin/index', 'AdminController@adminIndex')->name('AdminIndex');
 
 //=================================Arnold's Routes=================================
 Route::resource('/property-type', 'PropertyTypeController');
+Route::resource('/amenity', 'AmenityController');
 
 
 

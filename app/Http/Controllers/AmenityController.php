@@ -3,13 +3,14 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\PropertyType;
 
 use DB;
 
+use App\Amenity;
+
 use Session;
 
-class PropertyTypeController extends Controller
+class AmenityController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -18,12 +19,12 @@ class PropertyTypeController extends Controller
      */
     public function index()
     {
-        $allpropertytypes = DB::table('property_types')
+        $allamenities = DB::table('amenities')
                             ->paginate(10);
 
                             //dd($allpropertytypes);
 
-       return view('admin.property_type.view_property_type', compact('allpropertytypes'));
+       return view('admin.amenities.view_amenities', compact('allamenities'));
     }
 
     /**
@@ -33,7 +34,7 @@ class PropertyTypeController extends Controller
      */
     public function create()
     {
-        return view('admin.property_type.property_type');
+        return view('admin.amenities.addamenities');
     }
 
     /**
@@ -51,17 +52,16 @@ class PropertyTypeController extends Controller
         ));
 
         //create an instance of the propertytype class
-        $propertype = new PropertyType;
+        $amenity = new Amenity;
 
-        $propertype->name = $request['name'];
+        $amenity->name = $request['name'];
 
 
-        $propertype->save();
+        $amenity->save();
 
-        Session::flash('property-success','PropertyType Added Successfully!');
+        Session::flash('amenity-success','Amenity Added Successfully!');
 
-        return redirect()->route('property-type.index');
-
+        return redirect()->route('amenity.index');
     }
 
     /**
@@ -83,9 +83,9 @@ class PropertyTypeController extends Controller
      */
     public function edit($id)
     {
-        $propertype = PropertyType::findOrFail($id);
+        $amenity = Amenity::findOrFail($id);
 
-        return view('admin.property_type.editproperty_type', compact('propertype'));
+        return view('admin.amenities.editamenities', compact('amenity'));
     }
 
     /**
