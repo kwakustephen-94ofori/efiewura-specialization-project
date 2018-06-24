@@ -17,5 +17,7 @@ class ImagesTableSeeder extends Seeder
             'filename'=>'img/3.jpg',
             
         ]);
+
+        
     }
 }

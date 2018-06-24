@@ -167,6 +167,9 @@ Route::get('/admin/index', 'AdminController@adminIndex')->name('AdminIndex');
 // Route to view all properties by admin
 Route::get('/admin/properties', 'AdminController@viewProperties')->name('allProperties');
 
+// Deleteing a particular property
+Route::delete('/deleteproperties/{id}', 'AdminController@deleteProperty')->name('deleteProperty');
+
 
 
 

@@ -14,8 +14,8 @@ class AmenitiesTableSeeder extends Seeder
         DB::table('amenities')->insert([
             
             'name' =>'School',
-            
-            
+             
         ]);
+
     }
 }
