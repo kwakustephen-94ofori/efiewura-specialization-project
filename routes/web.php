@@ -322,3 +322,11 @@ Route::post('user/register', 'UserController@store')->name('save-user');
 
 Route::get('user/verification', 'UserController@showVerificationForm')->name('verify-user');
 Route::post('user/verification', 'UserController@verification')->name('verify');
+
+
+Route::group(['middleware' => ['auth']], function () {
+    //
+
+    Route::get('property/add', 'PropertyController@addProperty')->name('add-property');
+    Route::post('property/add', 'PropertyController@storeProperty')->name('save-property');
+});
