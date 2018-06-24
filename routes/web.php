@@ -229,7 +229,7 @@ Route::get('/about-us', 'AboutController@about')->name('aboutUs');
 
 
 //=================================Arnold's Routes=================================
-
+Route::resource('/property-type', 'PropertyTypeController');
 
 
 
