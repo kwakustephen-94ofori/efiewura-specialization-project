@@ -306,3 +306,8 @@ Route::get('/about-us', 'AboutController@about')->name('aboutUs');
 
 
 //=======================Samuel's Routes==============================================
+Route::get('user/register', 'UserController@register')->name('register-user');
+Route::post('user/register', 'UserController@store')->name('save-user');
+
+Route::get('user/verification', 'UserController@showVerificationForm')->name('verify-user');
+Route::post('user/verification', 'UserController@verification')->name('verify');
