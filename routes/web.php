@@ -154,6 +154,8 @@ Route::get('/about-us', 'AboutController@about')->name('aboutUs');
 
 //============================Isaac's Routes===============================
 
+// Admin index route
+Route::get('/admin/index', 'AdminController@adminIndex')->name('AdminIndex');
 
 
 
