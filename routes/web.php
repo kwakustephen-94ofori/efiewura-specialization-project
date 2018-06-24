@@ -79,9 +79,9 @@ Route::get('/about-us', 'AboutController@about')->name('aboutUs');
 
 
 //==============================Derricks Route==============================
-Route::get('/Login', 'LoginController@login')->name('login');
-Route::post('/Login', 'LoginController@store');
-Route::get('/Logout', 'LoginController@doLogout');
+Route::get('/login', 'LoginController@login')->name('login');
+Route::post('/login', 'LoginController@store');
+Route::get('/logout', 'LoginController@doLogout');
 
 
 
