@@ -13,7 +13,7 @@
                 <ul>
                     
                     <li data-transition="fade" data-slotamount="1" data-masterspeed="1000" data-thumb="images/main-slider/1.jpg"  data-saveperformance="off"  data-title="Awesome Title Here">
-                    <img src="images/main-slider/1.jpg"  alt=""  data-bgposition="center top" data-bgfit="cover" data-bgrepeat="no-repeat"> 
+                    <img src="images/main-slider/3.jpg"  alt=""  data-bgposition="center top" data-bgfit="cover" data-bgrepeat="no-repeat"> 
                     
                     <div class="tp-caption sft sfb tp-resizeme"
                     data-x="center" data-hoffset="0"
@@ -26,7 +26,7 @@
                     data-elementdelay="0.01"
                     data-endelementdelay="0.3"
                     data-endspeed="1200"
-                    data-endeasing="Power4.easeIn"><h2>Start Searching<span class="theme_color">Best Properties</span></h2></div>
+                    data-endeasing="Power4.easeIn"><h2>Efiewura <span class="theme_color">Best Properties</span></h2></div>
                     
                     <div class="tp-caption sfb sfb tp-resizeme"
                     data-x="center" data-hoffset="0"
@@ -58,7 +58,7 @@
                     
                     
                     <li data-transition="fade" data-slotamount="1" data-masterspeed="1000" data-thumb="images/main-slider/2.jpg"  data-saveperformance="off"  data-title="Awesome Title Here">
-                    <img src="images/main-slider/2.jpg"  alt=""  data-bgposition="center top" data-bgfit="cover" data-bgrepeat="no-repeat"> 
+                    <img src="images/main-slider/4.jpg"  alt=""  data-bgposition="center top" data-bgfit="cover" data-bgrepeat="no-repeat"> 
                     
                     <div class="tp-caption content-caption sfl sfb tp-resizeme"
                     data-x="left" data-hoffset="15"
@@ -79,7 +79,7 @@
                                 <div class="content-column">
                                 	<div class="property-tag">RENT</div>
                                     
-                                	<h4>ENFIELD HOMES, VC STREET</h4>
+                                	<h4>ENFIELD HOMES, SPINTEX STREET</h4>
                                     <div class="location">Manhattan, USA</div>
                                     <div class="price-header clearfix">
                                     	<div class="price">$ 1530 <span class="duration">/ per month</span></div>
@@ -438,7 +438,7 @@
     	<div class="auto-container">
         	<!--Heading-->
             <div class="sec-title centered">
-            	<div class="subtitle">Meet Our Agents</div>
+            	<div class="subtitle">Meet Our Personnels</div>
                 <h2>PROFFESIONAL TEAM</h2>
             </div>
             
@@ -457,8 +457,8 @@
                         </div>
                         <div class="lower-content">
                         	<div class="inner">
-                            	<h4><a href="agent-single.html">Eva Rodriges</a></h4>
-                                <div class="designation">Real Estate Agent</div>
+                            	<h4><a href="agent-single.html">Benjamin Acheampong</a></h4>
+                                <div class="designation">Real Estate Personnels</div>
                             </div>
                         </div>
                     </div>
@@ -479,7 +479,7 @@
                         <div class="lower-content">
                         	<div class="inner">
                             	<h4><a href="agent-single.html">Jacob Philip</a></h4>
-                                <div class="designation">Real Estate Agent</div>
+                                <div class="designation">Real Estate Personnels</div>
                             </div>
                         </div>
                     </div>
@@ -500,7 +500,7 @@
                         <div class="lower-content">
                         	<div class="inner">
                             	<h4><a href="agent-single.html">Paul Jones</a></h4>
-                                <div class="designation">Real Estate Agent</div>
+                                <div class="designation">Real Estate Personnels</div>
                             </div>
                         </div>
                     </div>
@@ -525,7 +525,7 @@
             	<!--Slide-->
                 <div class="slide-item">
                 	<div class="slide-content  clearfix">
-                    	<figure class="image"><img src="images/resource/author-thumb-2.jpg" alt=""></figure>
+                    	<figure class="image"><img src="images/resource/client1.jpg" alt=""></figure>
                         <div class="content-box">
                         	<div class="info">
                             	<h4>JANE RAMOS</h4>
@@ -539,7 +539,7 @@
                 <!--Slide-->
                 <div class="slide-item">
                 	<div class="slide-content  clearfix">
-                    	<figure class="image"><img src="images/resource/author-thumb-2.jpg" alt=""></figure>
+                    	<figure class="image"><img src="images/resource/client.jpg" alt=""></figure>
                         <div class="content-box">
                         	<div class="info">
                             	<h4>JANE RAMOS</h4>
@@ -553,7 +553,7 @@
                 <!--Slide-->
                 <div class="slide-item">
                 	<div class="slide-content  clearfix">
-                    	<figure class="image"><img src="images/resource/author-thumb-2.jpg" alt=""></figure>
+                    	<figure class="image"><img src="images/resource/client.jpg" alt=""></figure>
                         <div class="content-box">
                         	<div class="info">
                             	<h4>JANE RAMOS</h4>
@@ -596,7 +596,7 @@
                                     <li><a href="#"><span class="fa fa-comment-o"></span> 4 Comments</a></li>
                                 </ul>
                             </div>
-                            <h4><a href="blog-details.html">Find the right property for you</a></h4>
+                            <h4><a href="blog-details.html">No Agents</a></h4>
                             <div class="text-desc">Great turbulent clouds, kindling renet the energy hidden in matter prime number, rich in heavy atoms venture courage of our rig veda. </div>
                             <div class="more-link"><a href="blog-details.html"><span class="fa fa-long-arrow-right"></span> <span class="txt">Read More</span></a></div>
                         </div>
