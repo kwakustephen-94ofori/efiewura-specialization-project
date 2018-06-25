@@ -77,20 +77,20 @@
                         	<div class="clearfix">
                             	<div class="image-column"><img src="images/main-slider/content-image-1.jpg" alt=""></div>
                                 <div class="content-column">
-                                	<div class="property-tag">RENT</div>
+                                	<div class="property-tag">{{$slideProperty->sale_type}}</div>
                                     
-                                	<h4>ENFIELD HOMES, SPINTEX STREET</h4>
-                                    <div class="location">Manhattan, USA</div>
+                                	<h4>{{$slideProperty->suburb}}</h4>
+                                    <div class="location">{{$slideProperty->region}}</div>
                                     <div class="price-header clearfix">
-                                    	<div class="price">$ 1530 <span class="duration">/ per month</span></div>
+                                    	<div class="price">$ {{ number_format($slideProperty->price+0)}} <span class="duration">/ per month</span></div>
                                         <div class="add-fav"><a href="#"><span class="fa fa-heart-o"></span></a></div>
                                     </div>
                                     <div class="specs-list">
                                     	<ul class="clearfix">
-                                            <li><span class="icon flaticon-bed-1"></span> 3 Bedrooms</li>
-                                            <li><span class="icon flaticon-vintage-bathtub"></span> 2 Bathrooms</li>
-                                            <li><span class="icon flaticon-car-inside-a-garage"></span> 1 Garage</li>
-                                            <li><span class="icon flaticon-blog-template"></span> 1040 sq ft</li>
+                                            <li><span class="icon flaticon-bed-1"></span> {{$slideProperty->number_of_rooms}}</li>
+                                            <li><span class="icon flaticon-vintage-bathtub"></span> {{$slideProperty->number_of_bathrooms}} </li>
+                                            <li><span class="icon flaticon-car-inside-a-garage"></span> {{$slideProperty->garage}}</li>
+                                            <li><span class="icon flaticon-blog-template"></span> {{$slideProperty->dimension}} sq ft</li>
                                         </ul>
                                     </div>
                                 </div>
@@ -106,6 +106,7 @@
         </div>
     </section>
     
+    
     <!--Property Listing-->
     <section class="property-listing">
     	<div class="auto-container">
@@ -116,174 +117,46 @@
             </div>
             
         	<div class="row clearfix">
+            @foreach($properties as $key => $property)
             	<!--Default Property Box-->
                 <div class="default-property-box col-lg-4 col-md-6 col-sm-6 col-xs-12">
                 	<div class="inner-box">
                     	<div class="image-box">
                         	<figure class="image"><a href="property-details.html"><img src="images/resource/featured-image-1.jpg" alt=""></a></figure>
                             <div class="upper-info clearfix">
-                            	<div class="property-label">Sale</div>
+                            	<div class="property-label">{{$property->sale_type}}</div>
                                 <div class="add-fav"><a href="#"><span class="fa fa-heart-o"></span></a></div>
                             </div>
-                            <div class="property-price">$ 2,500,000</div>
+                            <div class="property-price">$ {{ number_format($property->price+0)}}</div>
                         </div>
                         <div class="lower-content">
                         	<div class="property-title">
-                            	<h3><a href="property-details.html">10 Romain St, Twin Peaks</a></h3>
-                                <div class="location">San Francisco</div>
+                            	<h3><a href="property-details.html">{{$property->suburb}}</a></h3>
+                                <div class="location">{{$property->region}}</div>
                             </div>
-                            <div class="text-desc">Former high end beach home converted to Class “A” office space. 2519 sq ft complete with three and 1/2 baths. Large ...</div>
+                            <div class="text-desc">{{$property->description}}</div>
                             <div class="property-specs">
                             	<ul class="clearfix">
-                                    <li><span class="icon flaticon-bed-1"></span> 5</li>
-                                    <li><span class="icon flaticon-vintage-bathtub"></span> 3</li>
-                                    <li><span class="icon flaticon-car-inside-a-garage"></span> 2</li>
-                                    <li><span class="icon flaticon-blog-template"></span> 1240 sq ft</li>
+                                    <li><span class="icon flaticon-bed-1"></span> {{$property->number_of_rooms}} </li>
+                                    <li><span class="icon flaticon-vintage-bathtub"></span> {{$property->number_of_bathrooms}}</li>
+                                    <li><span class="icon flaticon-car-inside-a-garage"></span> {{$property->garage}}</li>
+                                    <li><span class="icon flaticon-blog-template"></span> {{$property->dimension}} sq ft</li>
                                 </ul>
                             </div>
                         </div>
                     </div>
                 </div>
+            @endforeach
+             
+            <div>  
+            <div class="text-center">
+                <ul class="pagination pagination-sm pager">
+                    {!! $properties->links(); !!}
+                </ul>
+            </div>
+            </div>  
                 
-                <!--Default Property Box-->
-                <div class="default-property-box col-lg-4 col-md-6 col-sm-6 col-xs-12">
-                	<div class="inner-box">
-                    	<div class="image-box">
-                        	<figure class="image"><a href="property-details.html"><img src="images/resource/featured-image-2.jpg" alt=""></a></figure>
-                        </div>
-                        <div class="lower-content">
-                        	<div class="property-title">
-                            	<h3><a href="property-details.html">Gorgeous Farm in Myrtle</a></h3>
-                                <div class="location">New York</div>
-                            </div>
-                            <div class="text-desc">Former high end beach home converted to Class “A” office space. 2519 sq ft complete with three and 1/2 baths. Large ...</div>
-                            <div class="property-specs">
-                            	<ul class="clearfix">
-                                    <li><span class="icon flaticon-bed-1"></span> 5</li>
-                                    <li><span class="icon flaticon-vintage-bathtub"></span> 3</li>
-                                    <li><span class="icon flaticon-car-inside-a-garage"></span> 2</li>
-                                    <li><span class="icon flaticon-blog-template"></span> 1240 sq ft</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <!--Default Property Box-->
-                <div class="default-property-box col-lg-4 col-md-6 col-sm-6 col-xs-12">
-                	<div class="inner-box">
-                    	<div class="image-box">
-                        	<figure class="image"><a href="property-details.html"><img src="images/resource/featured-image-3.jpg" alt=""></a></figure>
-                            <div class="upper-info clearfix">
-                            	<div class="property-label">Rent</div>
-                                <div class="add-fav"><a href="#"><span class="fa fa-heart-o"></span></a></div>
-                            </div>
-                            <div class="property-price">$ 450/month</div>
-                        </div>
-                        <div class="lower-content">
-                        	<div class="property-title">
-                            	<h3><a href="property-details.html">Luxury Villa In Rego Park</a></h3>
-                                <div class="location">California</div>
-                            </div>
-                            <div class="text-desc">Former high end beach home converted to Class “A” office space. 2519 sq ft complete with three and 1/2 baths. Large ...</div>
-                            <div class="property-specs">
-                            	<ul class="clearfix">
-                                    <li><span class="icon flaticon-bed-1"></span> 5</li>
-                                    <li><span class="icon flaticon-vintage-bathtub"></span> 3</li>
-                                    <li><span class="icon flaticon-car-inside-a-garage"></span> 2</li>
-                                    <li><span class="icon flaticon-blog-template"></span> 1240 sq ft</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <!--Default Property Box-->
-                <div class="default-property-box col-lg-4 col-md-6 col-sm-6 col-xs-12">
-                	<div class="inner-box">
-                    	<div class="image-box">
-                        	<figure class="image"><a href="property-details.html"><img src="images/resource/featured-image-4.jpg" alt=""></a></figure>
-                            <div class="upper-info clearfix">
-                            	<div class="property-label">Sale</div>
-                                <div class="add-fav"><a href="#"><span class="fa fa-heart-o"></span></a></div>
-                            </div>
-                            <div class="property-price">$ 3,240,000</div>
-                        </div>
-                        <div class="lower-content">
-                        	<div class="property-title">
-                            	<h3><a href="property-details.html">401 Biscayne Boulevard</a></h3>
-                                <div class="location">Miami</div>
-                            </div>
-                            <div class="text-desc">Former high end beach home converted to Class “A” office space. 2519 sq ft complete with three and 1/2 baths. Large ...</div>
-                            <div class="property-specs">
-                            	<ul class="clearfix">
-                                    <li><span class="icon flaticon-bed-1"></span> 5</li>
-                                    <li><span class="icon flaticon-vintage-bathtub"></span> 3</li>
-                                    <li><span class="icon flaticon-car-inside-a-garage"></span> 2</li>
-                                    <li><span class="icon flaticon-blog-template"></span> 1240 sq ft</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <!--Default Property Box-->
-                <div class="default-property-box col-lg-4 col-md-6 col-sm-6 col-xs-12">
-                	<div class="inner-box">
-                    	<div class="image-box">
-                        	<figure class="image"><a href="property-details.html"><img src="images/resource/featured-image-5.jpg" alt=""></a></figure>
-                            <div class="upper-info clearfix">
-                            	<div class="property-label">Rent</div>
-                                <div class="add-fav"><a href="#"><span class="fa fa-heart-o"></span></a></div>
-                            </div>
-                            <div class="property-price">$ 450/month</div>
-                        </div>
-                        <div class="lower-content">
-                        	<div class="property-title">
-                            	<h3><a href="property-details.html">1200 Anastasia Avenue</a></h3>
-                                <div class="location">California</div>
-                            </div>
-                            <div class="text-desc">Former high end beach home converted to Class “A” office space. 2519 sq ft complete with three and 1/2 baths. Large ...</div>
-                            <div class="property-specs">
-                            	<ul class="clearfix">
-                                    <li><span class="icon flaticon-bed-1"></span> 5</li>
-                                    <li><span class="icon flaticon-vintage-bathtub"></span> 3</li>
-                                    <li><span class="icon flaticon-car-inside-a-garage"></span> 2</li>
-                                    <li><span class="icon flaticon-blog-template"></span> 1240 sq ft</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <!--Default Property Box-->
-                <div class="default-property-box col-lg-4 col-md-6 col-sm-6 col-xs-12">
-                	<div class="inner-box">
-                    	<div class="image-box">
-                        	<figure class="image"><a href="property-details.html"><img src="images/resource/featured-image-6.jpg" alt=""></a></figure>
-                            <div class="upper-info clearfix">
-                            	<div class="property-label">Sale</div>
-                                <div class="add-fav"><a href="#"><span class="fa fa-heart-o"></span></a></div>
-                            </div>
-                            <div class="property-price">$ 1,450,700</div>
-                        </div>
-                        <div class="lower-content">
-                        	<div class="property-title">
-                            	<h3><a href="property-details.html">Lovelace Road Greenfield</a></h3>
-                                <div class="location">San Francisco</div>
-                            </div>
-                            <div class="text-desc">Former high end beach home converted to Class “A” office space. 2519 sq ft complete with three and 1/2 baths. Large ...</div>
-                            <div class="property-specs">
-                            	<ul class="clearfix">
-                                    <li><span class="icon flaticon-bed-1"></span> 5</li>
-                                    <li><span class="icon flaticon-vintage-bathtub"></span> 3</li>
-                                    <li><span class="icon flaticon-car-inside-a-garage"></span> 2</li>
-                                    <li><span class="icon flaticon-blog-template"></span> 1240 sq ft</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+           
                 
             </div>
         </div>
