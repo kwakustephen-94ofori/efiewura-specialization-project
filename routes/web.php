@@ -329,4 +329,6 @@ Route::group(['middleware' => ['auth']], function () {
 
     Route::get('property/add', 'PropertyController@addProperty')->name('add-property');
     Route::post('property/add', 'PropertyController@storeProperty')->name('save-property');
+    Route::get('property/index', 'PropertyController@index')->name('properties');
+    Route::get('property/{show}', 'PropertyController@show')->name('property.show');
 });

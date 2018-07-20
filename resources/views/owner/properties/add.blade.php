@@ -1,6 +1,6 @@
 @extends('layout.ownerlayout')
 
-@section('title' , 'Owner DashBoard')
+@section('title' , 'Add New Property')
 
 
 @section('content')

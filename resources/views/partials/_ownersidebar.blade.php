@@ -47,7 +47,7 @@
                   </li>
                   <li><a><i class="fa fa-edit"></i>My Properties <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
-                      <li><a href="#">View Properties</a></li>
+                      <li><a href="{{route('properties')}}">View Properties</a></li>
                       <li><a href="#">Property Type</a></li>
                       <li><a href="{{route('add-property')}}">Add Properties</a></li>
                       <li><a href="#">Amenities</a></li>
