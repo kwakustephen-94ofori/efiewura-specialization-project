@@ -251,7 +251,8 @@ Route::get('/admin/properties', 'AdminController@viewProperties')->name('allProp
 
 
 //=================================Arnold's Routes=================================
-
+Route::resource('/property-type', 'PropertyTypeController');
+Route::resource('/amenity', 'AmenityController');
 
 
 
