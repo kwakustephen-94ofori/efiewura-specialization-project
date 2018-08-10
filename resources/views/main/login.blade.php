@@ -9,10 +9,7 @@
         <div class="panel-heading w3-padding-24" id="loginHeader">
             <h1><center><b>PROVIDE CRENDENTIALS TO LOGIN</b></center></h1>
         </div>
-        <!-- Form for login starts here -->
-        <form class="form" method="POST" action="{{ route('login') }}">
-          {{ csrf_field() }}
-          @if(count($errors) >0)
+        @if(count($errors) >0)
                           @foreach($errors->all() as $error)
                           <div class="alert alert-danger">
                               
@@ -20,6 +17,10 @@
                           </div>
                           @endforeach
                           @endif
+        <!-- Form for login starts here -->
+        <form class="form" method="POST" action="{{ route('login') }}">
+        <input type="hidden" name="_token" value="{{ csrf_token() }}">
+          
 
           <!-- Panel body starts here -->
           <div class="panel-body" id="loginBody">

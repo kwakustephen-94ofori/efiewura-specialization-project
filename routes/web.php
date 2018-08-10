@@ -87,6 +87,17 @@ Route::get('/login', 'LoginController@login')->name('login');
 Route::post('/login', 'LoginController@store');
 Route::get('/logout', 'LoginController@doLogout');
 
+Route::get('/user/personnel', 'UserController@personnelForm')->name('personnel');
+Route::post('/user/personnel', 'UserController@AddPersonnel');
+Route::get('/user/personnel/show','UserController@showIndex')->name('showpersonnel');
+Route::get('/personnel/{id}/edit','UserController@editPersonnel')->name('editpersonnel');
+
+Route::post('/personnel/{id}/update', 'UserController@updatePersonnel')->name('updatepersonnel');
+
+Route::get('/delete/{id}', 'UserController@deletePersonnel')->name('deletepersonnel');
+
+
+
 
 
 

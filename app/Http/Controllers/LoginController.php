@@ -33,14 +33,14 @@ class LoginController extends Controller
         'password' => $request['password'],
         'user_type'=>'Property Owner'])) {
             // Authentication passed...
-            return redirect()->intended('/');
+            return redirect()->intended('/admin/index');
 
         }
         else if(Auth::attempt(['email' => $request['email'], 
         'password' => $request['password'],
         'user_type'=>'Personnel'])){
 
-            return redirect()->intended('/');
+            return redirect()->intended('/admin/index');
 
 
         }
@@ -48,7 +48,7 @@ class LoginController extends Controller
         'password' => $request['password'],
         'user_type'=>'Admin'])){
 
-            return redirect()->intended('/');
+            return redirect()->intended('/admin/index');
 
 
         }else{
