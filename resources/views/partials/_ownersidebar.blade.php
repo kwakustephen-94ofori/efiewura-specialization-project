@@ -7,13 +7,27 @@
             <div class="clearfix"></div>
 
             <!-- menu profile quick info -->
+                <?php
+                use Illuminate\Support\Facades\Auth;
+
+                $user = Auth::user();
+
+                ?>
             <div class="profile clearfix">
               <div class="profile_pic">
-                <img src="{{ asset('images/admin.jpg')}}" alt="..." class="img-circle profile_img">
+                <script>
+                 function callfun(obj)
+                 {
+                        var noimg = "{{ asset('images/avatar.png')}}";
+                        obj.src=noimg;
+                }
+                </script>
+
+                <img src="{{ asset("profilepics/$user->profile_pic")}}" onerror="this.onerror=null;callfun(this);" class="img-circle profile_img">
               </div>
               <div class="profile_info">
                 <span>Welcome,</span>
-                <h2>Benjamin Acheampong</h2>
+                <h2>{{auth()->user()->name}}</h2>
               </div>
             </div>
             <!-- /menu profile quick info -->
@@ -33,9 +47,9 @@
                   </li>
                   <li><a><i class="fa fa-edit"></i>My Properties <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
-                      <li><a href="#">View Properties</a></li>
+                      <li><a href="{{route('properties')}}">View Properties</a></li>
                       <li><a href="#">Property Type</a></li>
-                      <li><a href="#">Add Properties</a></li>
+                      <li><a href="{{route('add-property')}}">Add Properties</a></li>
                       <li><a href="#">Amenities</a></li>
                       <li><a href="#">Locations</a></li>
                     </ul>

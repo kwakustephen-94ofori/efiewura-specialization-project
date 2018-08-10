@@ -48,10 +48,10 @@ class UserController extends Controller
         if (session('code')==$request['code']){
 
             DB::table('users')->where('id', auth()->user()->id)->update(['status'=>1]);
-            return redirect()->route('home');
+            return redirect()->route('owner-index');
         }
         else{
-            return redirect()->route('home');
+            return redirect()->route('owner-index');
         }
     }
 }
