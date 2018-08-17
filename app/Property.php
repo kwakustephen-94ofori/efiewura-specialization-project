@@ -10,6 +10,10 @@ use Intervention\Image\Facades\Image as Image;
 class Property extends Model
 {
     //
+    public function user()
+    {
+        return $this->belongsTo('App\User');
+    }
 
     public static function saveProperty($request){
         
