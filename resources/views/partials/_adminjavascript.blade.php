@@ -1,6 +1,7 @@
 <!-- jQuery -->
 <!--  <script src="../vendors/jquery/dist/jquery.min.js"></script> -->
 
+
 <script src="{{ asset('js/jquery.js')}}"></script> 
 <!-- Bootstrap -->
 <!--  <script src="../vendors/bootstrap/dist/js/bootstrap.min.js"></script> -->
@@ -16,7 +17,6 @@
 <script src="{{ asset('js/gauge.min.js')}}"></script>
 <!-- bootstrap-progressbar -->
 <script src="{{ asset('js/bootstrap-progressbar.min.js')}}"></script>
-
 
 <!-- iCheck -->
 <script src="{{ asset('js/icheck.min.js')}}"></script>
@@ -44,6 +44,9 @@
 
 <!-- Custom Theme Scripts -->
 <script src="{{ asset('js/custom.min.js')}}"></script>
+
+<script src="{{ asset('js/custom.js') }}"></script>
+
 <!-- Google Analytics -->
 <script>
 (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){

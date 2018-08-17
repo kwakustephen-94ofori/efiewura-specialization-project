@@ -17,11 +17,6 @@ class Property_typesTableSeeder extends Seeder
             
         ]);
 
-         DB::table('property_types')->insert([
-            
-            'property_name' => 'Apartment',
-            
-        ]);
-        
+         
     }
 }

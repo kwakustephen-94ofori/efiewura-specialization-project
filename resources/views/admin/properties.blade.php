@@ -8,7 +8,12 @@
 <div class="right_col" role="main">
 
 <div class="row">
-    
+ @if (session()->has('delete'))
+ <div class="alert alert-info" role="alert" id="myAlert">
+  <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+    <strong>Success: </strong> {!! session('delete') !!} 
+ </div>
+ @endif
 
 <div class="col-md-12 col-sm-12 col-xs-12">
   <div class="x_panel">
@@ -25,8 +30,10 @@
       <p>The page shows all the properties Added and paginate by 20</p>
 
       <div class="table-responsive">
-        <table class="table table-boardered jambo_table bulk_action">
 
+        @include('partials.modal')
+
+     <table class="table table-boardered jambo_table bulk_action category-table" data-toggle="dataTable" data-form="deleteForm">
           <thead>
             <tr class="headings">
               <th class="column-title">No </th>
@@ -42,56 +49,39 @@
           </thead>
 
           <tbody>
+
+            @foreach($prop as $proper) 
             <tr class="even pointer">
-              <td class=" ">1</td>
-              <td class=" ">Western</td>
-              <td class=" ">Asanco</td>
-              <td class=" ">Uptown</td>
-              <td class="a-right a-right ">Nyarko</td>
-              <td class=" ">The room is paint with red colors and blue</td>
-              <td class="a-right a-right">₵ 400</td>
-              <td class=" ">6</td>
-              <td class=" ">7</td>
-              <td class=" ">200 x 400</td>
+              <td class=" ">{{ $proper->id }}</td>
+              <td class=" ">{{ $proper->region }}</td>
+              <td class=" ">{{ $proper->city}}</td>
+              <td class=" ">{{ $proper->suburb}}</td>
+              <td class="a-right a-right">{{ $proper->proname}}</td>
+              <td class=" ">{{ substr($proper->description, 0, 15)}}{{ strlen($proper->description) > 15 ? "..." : " " }}</td>
+              <td class="a-right a-right">₵{{ $proper->price }}</td>
+              <td class=" ">{{ $proper->number_of_rooms}}</td>
+              <td class=" ">{{ $proper->number_of_bathrooms}}</td>
+              <td class=" ">{{ $proper->dimension}}</td>
               <td><a href="#" class="btn btn-xs btn-info">View</a></td>
               <td><a href="#" class="btn btn-xs btn-success">Edit</a></td>
-              <td><a href="#" class="btn btn-xs btn-danger">Delete</a></td>
+              <td>
+                {!! Form::model($proper, ['method' => 'DELETE', 'route' => ['deleteProperty', $proper->id], 'class' =>'form-inline form-delete']) !!}
+                {!! Form::hidden('id', $proper->id) !!}
+                {!! Form::submit(trans('Delete'), ['class' => 'btn btn-xs btn-danger', 'name' => 'delete_modal']) !!}
+                {!! Form::close() !!}
+              </td>
             </tr>
+            @endforeach 
 
-             <tr class="even pointer">
-              <td class=" ">2</td>
-              <td class=" ">Western</td>
-              <td class=" ">Asanco</td>
-              <td class=" ">Uptown</td>
-              <td class="a-right a-right ">Nyarko</td>
-              <td class=" ">The room is paint with red colors and blue</td>
-              <td class="a-right a-right">₵ 900</td>
-              <td class=" ">6</td>
-              <td class=" ">7</td>
-              <td class=" ">200 x 400</td>
-              <td><a href="#" class="btn btn-xs btn-info">View</a></td>
-              <td><a href="#" class="btn btn-xs btn-success">Edit</a></td>
-              <td><a href="#" class="btn btn-xs btn-danger">Delete</a></td>
-            </tr>
-
-             <tr class="even pointer">
-              <td class=" ">3</td>
-              <td class=" ">Western</td>
-              <td class=" ">Asanco</td>
-              <td class=" ">Uptown</td>
-              <td class="a-right a-right ">Nyarko</td>
-              <td class=" ">The room is paint with red colors and blue</td>
-              <td class="a-right a-right">₵ 600</td>
-              <td class=" ">6</td>
-              <td class=" ">7</td>
-              <td class=" ">200 x 400</td>
-              <td><a href="#" class="btn btn-xs btn-info">View</a></td>
-              <td><a href="#" class="btn btn-xs btn-success">Edit</a></td>
-              <td><a href="#" class="btn btn-xs btn-danger">Delete</a></td>
-            </tr>
           </tbody>
         </table>
       </div>
+
+           <div class="text-center">
+            <ul class="pagination pagination-sm pager">
+              {!! $prop->links(); !!}
+            </ul>
+           </div>
     </div>
   </div>
 </div>

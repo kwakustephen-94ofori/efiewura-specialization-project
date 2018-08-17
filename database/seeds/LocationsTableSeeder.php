@@ -17,5 +17,6 @@ class LocationsTableSeeder extends Seeder
             'suburb' => 'Accra suburb',
             
         ]);
+
     }
 }
