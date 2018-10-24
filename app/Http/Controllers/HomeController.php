@@ -11,7 +11,6 @@ class HomeController extends Controller
 {
     public function index(){
 
-    	$properties = new Property;
     	$properties = DB::table('properties')
                             ->join('users', 'users.id', '=', 'properties.user_id')
                             ->join('locations', 'locations.id', '=', 'properties.location_id')
