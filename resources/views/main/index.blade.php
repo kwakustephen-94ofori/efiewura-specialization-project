@@ -26,7 +26,7 @@
                     data-elementdelay="0.01"
                     data-endelementdelay="0.3"
                     data-endspeed="1200"
-                    data-endeasing="Power4.easeIn"><h2>Efiewura <span class="theme_color">Best Properties</span></h2></div>
+                    data-endeasing="Power4.easeIn"><h2>Efiewura <span class="theme_color">Best & Properties</span></h2></div>
                     
                     <div class="tp-caption sfb sfb tp-resizeme"
                     data-x="center" data-hoffset="0"
