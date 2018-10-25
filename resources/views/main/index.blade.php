@@ -76,7 +76,7 @@
                     	<div class="slide-content">
                         	<div class="clearfix">
                             	<div class="image-column"><img src="images/main-slider/content-image-1.jpg" alt=""></div>
-                                <div class="content-column">
+                                {{-- <div class="content-column">
                                 	<div class="property-tag">{{$slideProperty->sale_type}}</div>
                                     
                                 	<h4>{{$slideProperty->suburb}}</h4>
@@ -93,7 +93,7 @@
                                             <li><span class="icon flaticon-blog-template"></span> {{$slideProperty->dimension}} sq ft</li>
                                         </ul>
                                     </div>
-                                </div>
+                                </div> --}}
                             </div>
                         </div>
                         
