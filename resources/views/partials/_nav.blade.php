@@ -58,7 +58,7 @@
                                         <li class=""><a href=" {{route('home')}} ">Home</a>
                                         </li>
 
-                                        <li><a href="/about-us">About Us</a></li>
+                                        <li><a href="{{ route('aboutUs')}}">About Us</a></li>
 
                                         <li class="dropdown"><a href="#">Our Agents</a>
                                         	<ul>
